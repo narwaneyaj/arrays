@@ -27,3 +27,18 @@ end
 puts lucky13([0, 2, 4])
 puts lucky13([1, 2, 3])
 puts lucky13([1, 2, 4])
+puts "\n"
+
+def countEvens(a)
+  evenNums = 0
+  a.each do |n|
+    if n % 2 == 0
+      evenNums += 1
+    end
+  end
+  return evenNums
+end
+
+puts countEvens([2, 1, 2, 3, 4])
+puts countEvens([2, 2, 0])
+puts countEvens([1, 3, 5])
