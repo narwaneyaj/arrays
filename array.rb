@@ -42,3 +42,24 @@ end
 puts countEvens([2, 1, 2, 3, 4])
 puts countEvens([2, 2, 0])
 puts countEvens([1, 3, 5])
+puts "\n"
+
+def bigDiff(a)
+  max = 0
+  min = 100
+  difference = 0
+  a.each do |n|
+    if n > max
+      max = n
+    end
+    if n < min
+      min = n
+    end
+  end
+  difference = max - min
+  return difference
+end
+
+puts bigDiff([10, 3, 5, 6])
+puts bigDiff([7, 2, 10, 9])
+puts bigDiff([2, 10, 7, 2])
