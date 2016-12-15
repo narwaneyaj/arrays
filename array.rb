@@ -63,3 +63,42 @@ end
 puts bigDiff([10, 3, 5, 6])
 puts bigDiff([7, 2, 10, 9])
 puts bigDiff([2, 10, 7, 2])
+puts "\n"
+
+def more14(a)
+  ones = 0
+  fours = 0
+  a.each do |n|
+    if n == 1
+      ones += 1
+    end
+    if n == 4
+      fours += 1
+    end
+  end
+  if ones > fours
+    return true
+  end
+  return false
+end
+
+puts more14([1, 4, 1])
+puts more14([1, 4, 1, 4])
+puts more14([1, 1])
+puts "\n"
+
+def no14(a)
+  a.each do |n|
+    if n == 1
+      return false
+    end
+    if n == 4
+      return false
+    end
+  end
+  return true
+end
+
+puts no14([1, 2, 3])
+puts no14([1, 2, 3, 4])
+puts no14([2, 3, 4])
